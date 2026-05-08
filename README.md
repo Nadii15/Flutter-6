@@ -1,17 +1,100 @@
-# slot_machine
+# Лабораторная работа №6. Flutter: StatefulWidget и управление состоянием
 
-A new Flutter project.
+## Информация о студенте
 
-## Getting Started
+- **Фамилия, Имя:** Рыхлюк Надежда
+- **Группа:** ИСП-233
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## Цель работы
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+Изучить разницу между StatelessWidget и StatefulWidget, научиться управлять состоянием приложения через setState(), подключать локальные изображения и обрабатывать нажатия кнопок на примере слот-машины.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Что было изучено
+
+1. **StatefulWidget vs StatelessWidget** — понял, что StatefulWidget позволяет хранить изменяемое состояние приложения, в отличие от StatelessWidget, который отрисовывается один раз и не меняется.
+
+2. **Работа с setState()** — научился обновлять состояние виджета через метод setState(), который сигнализирует Flutter о необходимости перерисовать UI с новыми данными.
+
+3. **Работа с assets** — освоил подключение локальных изображений через pubspec.yaml и их отображение с помощью виджета Image.asset().
+
+4. **Асинхронное программирование** — реализовал анимацию вращения барабанов с использованием async/await и Future, что позволило создать реалистичную прокрутку с замедлением.
+
+5. **Создание переиспользуемых виджетов** — вынес код барабанов в отдельный виджет SlotRow с обязательными параметрами (required), что улучшило структуру кода.
+
+## Скриншоты приложения
+
+
+
+### Заблокированная кнопка при 0 монет
+![Заблокированная кнопка](img/step4_Ryckluk.png)
+
+### Требования
+- Flutter SDK (версия 3.0 или выше)
+- VS Code или Android Studio
+- Браузер Chrome (для запуска в вебе)
+
+### Установка и запуск
+ ```bash
+   git clone <URL_вашего_репозитория>
+   cd slot_machine
+   flutter pub get
+   flutter run -d edge
+```
+
+
+
+
+# Учебное приложение. 🎰 Слот-машина 
+
+Простое Flutter-приложение - симулятор казино. Крути барабаны, собирай одинаковые сиволы и выигрывай монеты!
+
+## 📱Скриншоты
+|Главный экран|Победа|Монеты закончились|
+|:----:|:-----:|:----:|
+|![Главный экран](steps/main_screen.png)|![Главный экран](steps/win.png)|![Главный экран](steps/no_coins.png)|
+---
+
+## Как играть
+
+- Нажмите **КРУТИТЬ** чтобы запустить барабаны
+- Три одинаковых символа — победа (+3 монеты)
+- Три семёрки — джекпот (+10 монет)
+- Разные символы — проигрыш (-1 монета)
+- Начните заново кнопкой **Начать заново**
+
+---
+## 🚀 Запуск проекта
+
+**Требования:** Flutter 3.x, Dart 3.x
+
+# Перейти в папку
+cd slot_machine
+
+# Установить зависимости
+flutter pub get
+
+# Запустить в Chrome
+flutter run -d chrome
+```
+---
+## ⚙️ Технологии
+- Flutter 3.41.2
+- Dart 3.11.0
+- Платформы: Web, Android
+ 
+ ---
+## 📚 Что изучено
+- StatefulWidget и управление состоянием  через setState()
+- Работа с локальными изображениями - через Image.asset()
+- Генерация случайных чисел через dart:math
+- Анимация через async/await и AnimatedOpacity
+- Создание иконки в Krita и подключение через flutter_launcher_icons
+- Сборка под Web и Android
+- Работа со звуком:
+--Web Audio API (для браузера)
+--Пакет audioplayers (кроссплатформенное решение)
+
+## 👤 Автор
+Рыхлюк Надежда — группа ИСП-233
+Лабораторная работа №6, 2026
